@@ -3,6 +3,16 @@
     width: 250px;
   }
 
+  .new-hotel{
+    margin: 4% 5% 0% 5%; 
+    background-color: lightgrey;
+    width: 40%;
+    float: left;
+    display: flex;
+    justify-content: start;
+    align-content: center;
+  }
+
   .body-container{
     position: relative;
     height: 100%;
@@ -14,4 +24,9 @@
     margin: 4% 5% 0% 5%; 
     background-color: rgb(132,136,139);
     width: 40%;
+  }
+
+  #list-map {
+    position: relative;
+    top: 0%;
   }
