@@ -1,4 +1,4 @@
-/* Added CSS for city image on landing page */
+/* Added CSS for city image */
 #body-container {
   display: flex;
   flex-direction: column;
@@ -30,10 +30,10 @@
 }
 #search-bar {
   position: absolute;
-  top: 50%;
-  left: 36%; 
-  right: 36%;
-  bottom: 50%;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
 }
 #search-input {
   border: 1px solid transparent;
@@ -68,4 +68,39 @@
   margin-bottom:7%;
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 576px) {
+  #search-bar {
+      width: 60%;
+  }
+  .city-cards {
+      flex-direction: column;
+      margin: auto;
+  }
+  .city-image{
+      height: 200px;
+      width: 200px;
+  }
+  .city-card-and-name-inner {
+      padding: 4% 0%;
+  }
+  #view-more {
+      margin-bottom:20%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #search-bar {
+      width: 60%;
+  }
+  .city-cards {
+      flex-wrap: wrap;
+      margin: auto;
+  }
+  .city-image{
+      height: 250px;
+      width: 260px;
+  }
+  .city-card-and-name-inner {
+      padding: 4% 0%;
+  }
 }

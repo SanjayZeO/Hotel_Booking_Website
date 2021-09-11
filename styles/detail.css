@@ -58,3 +58,23 @@
   font-size: 55px;
   color: rosybrown;
 }
+
+@media only screen and (min-width: 768px) {
+    #image-div {
+        width: 60%;
+    }
+    #form-div {
+        width: 40%;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #image-div {
+        width: 75%;
+    }
+    #form-div {
+        height: 400px;
+        width: 25%;
+        padding: 0 2%;
+        border-left: 1px solid black;
+    }
+}
