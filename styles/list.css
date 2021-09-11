@@ -2,3 +2,16 @@
     height: 200px;
     width: 250px;
   }
+
+  .body-container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: 6%;
+  }
+
+  .new-hotel{
+    margin: 4% 5% 0% 5%; 
+    background-color: rgb(132,136,139);
+    width: 40%;
+  }

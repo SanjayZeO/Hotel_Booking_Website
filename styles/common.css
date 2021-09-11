@@ -13,7 +13,26 @@
     width: 22px;
 }
 
-html, body {
+html, body{
     height: 100%;
     width: 100%;
+    margin: 0;
+    background-color: #e0e0e0; 
   }
+
+  .handf {
+    background-color:rosybrown;
+    position: relative;
+    width: 100%;
+  }
+
+  header {
+    top: 0;  
+  }
+
+  footer {
+    padding:0.7%;
+    bottom: 0;
+  }
+
+  
