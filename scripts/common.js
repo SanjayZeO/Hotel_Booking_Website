@@ -96,6 +96,7 @@ let disableLoader = () => {
  };
  
  
+ displayLoader();
 
  displayHeaderTemplate();
  displayFooterTemplate();
