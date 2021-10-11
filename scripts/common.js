@@ -95,7 +95,68 @@ let disableLoader = () => {
    document.getElementById('footer').innerHTML += footerTemplate;
  };
  
+ 
 
  displayHeaderTemplate();
  displayFooterTemplate();
  
+ /**
+ * Event handler invoked when login button inside the HEADER is clicked
+ * @param {*} e event
+ */
+ let mainLogin = e => {
+   if (localStorage.getItem('isLogin') === 'true') {
+      localStorage.setItem('isLogin', 'false');
+      location.reload();
+   }
+ };
+ 
+ /**
+ * Event handler invoked when login button inside the LOGIN MODAL is clicked
+ * @param {*} e event
+ */
+ let login = e => {
+   // setting both username and password to admin
+   localStorage.setItem('username', 'admin');
+   localStorage.setItem('password', 'admin');
+   
+   localStorage.setItem('isLogin', 'false');
+ 
+   e.preventDefault();
+   let userElement = document.getElementById('username');
+   let passwordElement = document.getElementById('password');
+ 
+   if (
+      userElement.value === localStorage.getItem('username') &&
+      passwordElement.value === localStorage.getItem('password')
+   ) {
+      localStorage.setItem('isLogin', 'true');
+        alert('Successfully logged in!');
+        let loginElement = document.getElementById('login')
+        loginElement.dataset.target = '';
+        loginElement.innerText = 'LOGOUT';
+        location.reload();
+   } else {
+      alert('Incorrect credentials! Login failed!');
+      
+      userElement.value = '';
+      passwordElement.value = '';
+   }
+ };
+ 
+ let isLogin = localStorage.getItem('isLogin');
+ let loginElement = document.getElementById('login');
+ 
+ 
+ let checkLogin = () => {
+    if (!isLogin || isLogin === 'false') {
+        localStorage.clear();
+        loginElement.dataset.target = '#login-modal';
+        loginElement.innerText = 'LOGIN';
+    } else if (isLogin === 'true') {
+        loginElement.dataset.target = '';
+        loginElement.innerText = 'LOGOUT';
+    }
+ }
+ 
+ checkLogin();
