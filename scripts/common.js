@@ -8,7 +8,7 @@ let disableLoader = () => {
     document.getElementById("loader").style.visibility  = "visible";
  }
  
- // The header template
+ // The header
  let displayHeaderTemplate = () => {
    let headerTemplate = `<a href="index.html" class="logo">
         <img src="assests/images/logo.png" id="logo-image" alt="logo"/>
@@ -46,7 +46,7 @@ let disableLoader = () => {
    document.getElementById('header').innerHTML += headerTemplate;
  };
  
- // The footer template
+ // The footer
  let displayFooterTemplate = () => {
    let footerTemplate = `<div id="contact">
         <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-backdrop="false" data-target="#contact-modal">Contact Us</button>
@@ -102,8 +102,7 @@ let disableLoader = () => {
  displayFooterTemplate();
  
  /**
- * Event handler invoked when login button inside the HEADER is clicked
- * @param {*} e event
+ * login event handler
  */
  let mainLogin = e => {
    if (localStorage.getItem('isLogin') === 'true') {
@@ -112,12 +111,11 @@ let disableLoader = () => {
    }
  };
  
- /**
- * Event handler invoked when login button inside the LOGIN MODAL is clicked
- * @param {*} e event
+ /*
+ * Login Event Handler
  */
  let login = e => {
-   // setting both username and password to admin
+   // admin username and password
    localStorage.setItem('username', 'admin');
    localStorage.setItem('password', 'admin');
    

@@ -1,10 +1,11 @@
 let urlParams = new URLSearchParams(window.location.search);
 const API_URL = "https://travel-advisor.p.rapidapi.com/";
 const tripAdvisorHost = "travel-advisor.p.rapidapi.com";
+// api key
 const tripAdvisorKey = "587e9dcd6bmsh1a38eb93cd40371p18b15fjsnaaed08229728";
 const PRICE_PER_ROOM = 1000;
 
-/*  Booking form, according to the dates, number of adults and total price */
+/*  Booking form  */
 let updatePrice = () => {
     let adultElement = document.getElementById("adult");
     let totalPriceElement = document.getElementById("price");
