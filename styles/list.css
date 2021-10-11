@@ -11,6 +11,7 @@
   display: flex;
   justify-content: start;
   align-content: center;
+  max-height: 200px;
 }
 .hotel:hover {
   background-color: rosybrown;
@@ -20,6 +21,7 @@
   height: 100%;
   width: 100%;
   margin-top: 6%;
+  margin-bottom: 6%;
 }
 #list-map {
   position: relative;
@@ -37,4 +39,45 @@
 }
 #pills-tab {
   justify-content: center;
+}
+#map {
+  height: 82vh;
+  margin-top: 2%;
+}
+
+@media screen and (max-width: 576px) {  
+  #list-container {
+      margin-bottom: 150%;
+  }
+
+  #pills-tab {
+      padding-top: 15%;
+  }
+
+  .hotel{
+      width: 90%;
+      flex-direction: column;
+  }
+
+  .hotel-image-small {
+      width: 100%;
+  }
+
+  #map-view > img {
+      width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #pills-tab {
+      padding-top: 5%;
+  }
+  
+  .hotel{
+      width: 90%;
+      flex-direction: column;
+  }
+
+  #map-view > img {
+      width: 100%;
+  }
 }

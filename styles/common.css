@@ -9,7 +9,6 @@ html, body {
   background-color: #e0e0e0;  
 }
 a {
-  text-decoration: none !important;
   color: black !important;
 }
 .main-container {
@@ -27,7 +26,7 @@ a {
   height: 20px;
   width: 22px;
 }
-.header_footer {
+.header-footer {
   background-color:rosybrown;
   position: fixed;
   width: 100%;
@@ -60,6 +59,7 @@ footer {
 }
 .heading {
   font-family: cursive !important;
+  margin-top: 1%;
 }
 #login-form {
   display: flex;
@@ -76,13 +76,4 @@ footer {
 }
 .checked {
   color: orange;
-}
-
-@media only screen and (max-width: 576px) {
-  #contact-us {
-      margin: 6px;
-  }
-  #social-media {
-      padding-right: 15px;
-  }
 }
